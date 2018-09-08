@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Spawnpoint : MonoBehaviour {
 
-	public Obstacle obstacle;
+	public GameObject obstacle;
 	// Use this for initialization
 	void Start () {
 		GetComponent<SpriteRenderer> ().enabled = false;
