@@ -42,8 +42,10 @@ public class Player : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D(Collider2D col){
-		hp--;
-		StartCoroutine(screenshake.Shake (0.5f, 0.2f));
-		Destroy (col.gameObject);
+		if (col.tag != "Bullet") {
+			hp--;
+			StartCoroutine (screenshake.Shake (0.5f, 0.2f));
+			Destroy (col.gameObject);
+		}
 	}
 }
