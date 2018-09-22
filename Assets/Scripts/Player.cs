@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class Player : MonoBehaviour {
 
@@ -11,7 +10,6 @@ public class Player : MonoBehaviour {
 	public Obstacle obstacle;
 	public ScreenShake screenshake;
 	public GameObject playerscorepart;
-	public Image addscoreimg;
 	private bool canpoint;
 	// Use this for initialization
 	void Start () {
@@ -51,7 +49,6 @@ public class Player : MonoBehaviour {
 		score++;
 		canpoint = false;
 		Instantiate (playerscorepart, transform.position, Quaternion.identity);
-		addscoreimg.GetComponent<AddScorePicture> ().OnPointGain (true);
 		StartCoroutine (screenshake.Shake (0.1f, 0.1f));
 	}
 }

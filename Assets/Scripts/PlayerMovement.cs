@@ -24,10 +24,10 @@ public class PlayerMovement : MonoBehaviour {
 		transpos.y = Mathf.Clamp (transform.position.y, minheight, maxheight);
 		transform.position = transpos;
 
-		if (Input.GetKeyUp (KeyCode.UpArrow)) {
+		if (Input.GetKeyDown (KeyCode.UpArrow)) {
 			targetpos = new Vector2(transform.position.x,transform.position.y + yincrement);
 		}
-		if (Input.GetKeyUp (KeyCode.DownArrow)) {
+		if (Input.GetKeyDown (KeyCode.DownArrow)) {
 			targetpos = new Vector2(transform.position.x,transform.position.y - yincrement);
 		}
 	}
